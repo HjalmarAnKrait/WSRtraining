@@ -6,15 +6,13 @@
     android:layout_height="match_parent"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    tools:context=".Activities.AuthActivity">
+    tools:context=".Activities.RegActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="162dp"
         android:layout_height="128dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/app_logo" />
@@ -36,7 +34,7 @@
         android:id="@+id/loginText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rounded_button_selector"
         android:drawableLeft="@drawable/profile_icon"
         android:drawablePadding="20dp"
@@ -48,20 +46,19 @@
         android:textColor="@color/colorText"
         android:textSize="@dimen/button_text_size"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/passwordText"
+        android:id="@+id/emailText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button_selector"
-        android:drawableLeft="@drawable/lock_icon"
+        android:drawableLeft="@drawable/email_icon"
         android:drawablePadding="20dp"
-        android:hint="*******"
-        android:inputType="textPassword"
+        android:hint="ivanov@mail.ru"
+        android:inputType="textEmailAddress"
         android:maxLength="20"
         android:paddingLeft="20dp"
         android:textAllCaps="false"
@@ -72,52 +69,76 @@
         app:layout_constraintStart_toStartOf="@+id/loginText"
         app:layout_constraintTop_toBottomOf="@+id/loginText" />
 
-    <Button
-        android:id="@+id/authButton"
+    <EditText
+        android:id="@+id/passwordText1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button_selector"
-        android:gravity="center"
+        android:drawableLeft="@drawable/lock_icon"
+        android:drawablePadding="20dp"
+        android:hint="*******"
+        android:inputType="textPassword"
         android:maxLength="20"
-        android:text="Sign in"
+        android:paddingLeft="20dp"
         android:textAllCaps="false"
         android:textColor="@color/colorText"
         android:textSize="@dimen/button_text_size"
-        app:layout_constraintEnd_toEndOf="@+id/passwordText"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/passwordText"
-        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+        app:layout_constraintEnd_toEndOf="@+id/emailText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+    <EditText
+        android:id="@+id/passwordText2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_button_selector"
+        android:drawableLeft="@drawable/lock_icon"
+        android:drawablePadding="20dp"
+        android:hint="*******"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:paddingLeft="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/passwordText1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordText1"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText1" />
 
     <Button
         android:id="@+id/regButton"
-        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded_button_selector"
         android:gravity="center"
         android:maxLength="20"
         android:text="Sign up"
         android:textAllCaps="false"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorText"
         android:textSize="@dimen/button_text_size"
-        app:layout_constraintEnd_toEndOf="@+id/authButton"
-        app:layout_constraintStart_toStartOf="@+id/authButton"
-        app:layout_constraintTop_toBottomOf="@+id/authButton" />
+        app:layout_constraintEnd_toEndOf="@+id/passwordText2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordText2"
+        app:layout_constraintTop_toBottomOf="@+id/passwordText2" />
 
     <Button
-        android:id="@+id/skipButton"
+        android:id="@+id/backButton"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
         android:gravity="center"
         android:maxLength="20"
-        android:text="Skip"
+        android:text="Back"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="@+id/regButton"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/regButton"
         app:layout_constraintTop_toBottomOf="@+id/regButton" />
 
